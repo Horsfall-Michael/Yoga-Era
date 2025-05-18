@@ -18,3 +18,13 @@
 
 ## 📁 Project Structure
 
+yoga-era/
+│
+├── index.html
+├── style.css
+├── images/
+│ ├── logo-img.png
+│ ├── hero-section3.png
+│ ├── ...
+└── README.md
+
