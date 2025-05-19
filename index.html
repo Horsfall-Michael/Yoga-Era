@@ -38,7 +38,7 @@
                  <div class="hamburger" id="hamburger"> &#9776;</div>
                 </nav>   
             </header>
-            <div class="hero-content">
+            <div class="hero-content" id="heroContent">
              <h1>Breathe. Stretch. Become</h1>
              <p>Discover a deeper connection to your body, <br> breath and being through guided yoga & meditation</p>
              <a href="http://" class="cto-free-trial">Start Your Free Trial</a>
@@ -229,9 +229,10 @@
   document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');
-
+    const heroContent = document.getElementById('heroContent')
     hamburger.onclick = () => {
       navList.classList.toggle("show");
+      heroContent.classList.toggle("hide");
     };
   });
 </script>
