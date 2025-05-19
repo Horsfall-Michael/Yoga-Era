@@ -64,7 +64,9 @@ body{
   color: #111111;
   text-decoration: none;
 }
-
+.navlist li i{
+  margin: 10px;
+}
 .cto-sign-up{
   padding: 5px 15px;
   margin-top:20px;
@@ -72,6 +74,15 @@ body{
   color: #fff;
   background: #685D4F ;
   border-radius: 40px;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
 }
 .hero-section {
   position: relative;
@@ -117,6 +128,7 @@ body{
 }
 .start{
   background: url(images/Frame\ 14.png); 
+  background-repeat: no-repeat;
   display: flex;
   justify-content: space-evenly;
 }
@@ -311,14 +323,14 @@ max-width: 400px;
 }
 footer{
   background: #E2E0DC;
-  padding: 159px 87px;
+  padding: 129px 37px;
   font-size: 20px;
 }
 .footer-top{
   display: flex;
   justify-content: space-evenly;
   gap: 60px;
-  margin-bottom: 272px;
+  margin-bottom: 150px;
 }
 
 .column-1{
@@ -328,7 +340,7 @@ footer{
 
 }
 .socials{
-  max-width:330px ;
+  max-width:100% ;
 }
 .footer-logo{
   max-width: 179px;
@@ -336,7 +348,7 @@ footer{
 .navlist-footer{
   list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 .navlist-footer a{
   text-decoration: none;
@@ -374,9 +386,6 @@ footer{
   }
   .hero-section{
     height: 70vh;
-  }
-  .hero-content{
-    top:20;
   }
   .hero-content h1{
     font-size: 3rem;
@@ -453,8 +462,31 @@ footer{
 
 
 @media (max-width:780px){
-   .navbar{
+  .logo img{
+    max-width: 80%;
+  }
+  .logo-image{
+    left:-10px;
+  }
+  .navlist {
     display: none;
+    flex-direction: column;
+    background:transparent;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  .navlist.show {
+    display: flex !important;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .cto-sign-up{
+    display:none;
   }
   .hero-section{
     height: 70vh;
@@ -512,6 +544,9 @@ footer{
     margin-top: 20px;
     gap: 50px;
   }
+  .details2{
+  margin-left: 20px;
+}
   .why-us-icon p{
     text-align: center;
   }
@@ -617,12 +652,6 @@ footer{
 
 
 @media (max-width:480px){
-  .navbar{
-    display: none;
-  }
-  .hero-section{
-    height: 70vh;
-  }
   .hero-content{
     top:-10px;
   }

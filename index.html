@@ -8,13 +8,12 @@
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-   <link rel="manifest" href="/site.webmanifest">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
    <link rel="stylesheet" href="style.css">
    <title>Yoga Era</title>
 </head>
@@ -28,14 +27,15 @@
                      <img src="images/logo-img.png" alt="logo" class="logo-image">
                      <img src="images/Yoga Era-logo text.png" alt="logo" class="logo-text" >
                   </div>
-                  <ul class="navlist">
+                  <ul class="navlist" id="navList">
                      <li><a href="#">Home</a></li>
                      <li><a href="#yoga-style">Classes</a></li>
                      <li><a href="#why-us">About</a></li>
-                     <li><a href="#testimonials">Testimonial</a></li>
+                     <li><a href="#testimonials">Testimonial<i class="fa-solid fa-angle-down"></i></a></li>
                      <li><a href="http://">Contact</a></li>
                   </ul>
                   <a href="http://" class="cto-sign-up">Sign In</a>
+                 <div class="hamburger" id="hamburger"> &#9776;</div>
                 </nav>   
             </header>
             <div class="hero-content">
@@ -66,7 +66,7 @@
                          <p>flexible class schedule</p>
                      </div>
                   </div> 
-                  <div class="why-us-details">
+                  <div class="why-us-details details2">
                      <div class="why-us-icon">
                          <img src="images/Frame 19.png" alt="Yoga for all classes icon">
                          <p>yoga for all classes </p>
@@ -225,5 +225,16 @@
           <p>Terms & Conditions</p>
         </div>    
     </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('navList');
+
+    hamburger.onclick = () => {
+      navList.classList.toggle("show");
+    };
+  });
+</script>
+
 </body>
 </html>
