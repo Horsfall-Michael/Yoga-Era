@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 body{
     height: 100%;
@@ -87,7 +87,7 @@ body{
 .hero-section {
   position: relative;
   height: 100vh;
-  background-image: url('images/hero\ section3.png');
+  background-image: url('images/hero-section3.webp');
   background-size: cover;      
   background-repeat: no-repeat;
   background-position: top;
@@ -117,7 +117,7 @@ body{
   margin-top: 20px;
   font-weight: 100;
   font-size: 20px;
-  font-family: 'Poppins' sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .cto-free-trial{
   padding: 20px 30px;
@@ -161,29 +161,44 @@ body{
 #why-us{
   display:flex;
   margin: 20px 20px 20px 40px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .why-us-content{
-  display:block;
-  margin:auto;
+  display:flex;
+  flex-direction: column;;
 }
 .why-us-content h2{
   font-size: 2.5rem;
+  text-align: center;
 }
-.why-us-details{
+.why-us-details {
   display: flex;
-  margin: 130px 50px 40px 50px;
-  gap: 200px;
-  justify-content: center;
-  font-size: 14px;
+  justify-content: space-evenly;
+  margin: 6rem 1rem 1rem 1rem;
+  gap: 5rem;
+  width: 100%;
 }
-.why-us-icon{
-  justify-content: center;
-  align-content: center;
+.icon-section{
+  position: relative;
+  left: -2.5rem;
 }
-.why-us-icon img{
-  display: block;
-  margin: auto;
+.details2{
+  position: relative;
+  right: -20px;
+}
+
+.why-us-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.why-us-img{
+  width: 40%;
+}
+.last-why-us-icon{
+  position: relative;
+  left:-5px;
 }
 #yoga-style{
   background: url(images/Frame\ 24.png);
@@ -266,6 +281,7 @@ body{
   font-family: 'popins', sans-serif;
   font-size: 20px;
   margin-top: 50px;
+  margin-bottom: 30px;
 }
 .testimonial-cards{
   display:flex;
@@ -280,7 +296,7 @@ body{
   margin: 10px;
 }
 .review{
-  margin:10;
+  margin:10px;
   text-align: left;
   width: 325px;
   text-align: left;
@@ -339,7 +355,7 @@ footer{
 .column-1{
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 60px;
 
 }
 .socials{
@@ -361,10 +377,10 @@ footer{
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 60px;
 }
 .column{
-  margin-top: 0 30px;
+  margin-top:30px;
 }
 .footer-bottom{
   display: flex;
@@ -388,7 +404,7 @@ footer{
     font-size: 1.5rem;
   }
   .hero-section{
-    height: 70vh;
+    height: 80vh;
   }
   .hero-content h1{
     font-size: 3rem;
@@ -415,13 +431,25 @@ footer{
     height: auto;
   }
   .why-us-details{
-    margin-top: 70px;
+    gap: 1rem;
+    position: relative;
+    right: 40px;
+    margin-top: 3rem;
+  }
+  .details2{
     margin-left: 0;
-    gap: 100px;
+    right: 0;
+    left:-4px
+  }
+  .icon-section{
+  left: 0;
   }
   .why-us-icon{
     text-align: center;
   }
+  .last-why-us-icon{
+  left:-7px;
+}
   #yoga-style h2{
     font-size: 4rem;
   }
@@ -483,7 +511,6 @@ footer{
     right: 0;
     width: 100%;
     padding: 10px;
-    
   }
   .navbar .navlist li a{
     color: #fff;
@@ -522,7 +549,6 @@ footer{
   .start-content{
     margin: 20px;
     left: 0;
-    
   }
   .start-content h2{
     font-size: 1.5rem;
@@ -546,19 +572,33 @@ footer{
     font-size: 1.5rem;
     text-align: center;
   }
+  
   .why-us-img{
     align-self: center;
-    max-width: 95%;
+    width: 50%;
   }
   .why-us-details{
     margin-top: 20px;
     gap: 50px;
+    padding: 5% 10%;
+    position: relative;
+    left:-15px;
   }
   .details2{
-  margin-left: 20px;
-}
+    left: 18px;
+    
+  }
+  .last-why-us-icon{
+    left: -2px;
+  }
   .why-us-icon p{
     text-align: center;
+  }
+  .icon-section{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   #yoga-style h2{
     font-size: 1.7rem;
@@ -583,9 +623,9 @@ footer{
     margin: 0;
   }
   .card-2 img{
-   max-width: 95%;
-   left: 0;
-   top:0;
+    max-width: 95%;
+    left: 0;
+    top:0;
   }
   .levels li{
     margin: 5px 5px;
@@ -609,13 +649,17 @@ footer{
   .testimonial-cards{
     flex-direction: column;
     margin:0;
+    margin-top: 40px;
+    gap: 30px;
+  }
+  .testimonial-card{
+    display: flex;
+    justify-content: center;
     gap: 30px;
   }
   .testimonial-card img{
-    display: none;
-  }
-  .testimonial-card-2 img{
-    display: none;
+    width: 15rem;
+    border-radius: 50%;
   }
   .testimonial-card-2{
     top:0;
@@ -623,21 +667,18 @@ footer{
   .review{
     max-width: 300px;
   }
-   #signup-section{
+  #signup-section{
     padding: 0;
     justify-content: center;
     align-content: center;
-
-   }
+  }
   #signup-section h2{
     font-size: 1.2rem;
     padding: 50px 0 0 0;
-
   }
   #signup-section a{
     font-size: 1rem;
     margin-top: 20px;
-    
   }
   footer{
     font-size: 12px;
@@ -655,164 +696,32 @@ footer{
     flex-direction: column;
     gap: 20px;
   }
-
-
-
 }
-
 
 @media (max-width:480px){
   .hero-content{
     top:-10px;
   }
-  .hero-content h1{
-    font-size: 1.5rem;
-  }
-  .hero-content p{
-    font-size: 0.8rem;
-  }
   .cto-free-trial{
-    font-size: 1rem;
-    margin: 0;
     bottom: -20px;
   }
-  .start{
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .start-content{
-    margin: 20px;
-    left: 0;
+  .why-us-details{
+    right: 20px;
     
   }
-  .start-content h2{
-    font-size: 1.5rem;
-    margin:40px 10px 15px 10px;
+  .details2{
+    left:10px;
+    margin-left: 0;
   }
-  .start-content p br{
-    display:none;
-  }
-  .start img{
-    margin:40px 0 70px 0;
-    width: 100vw;
-  }
-  .cto-learn{
-    font-size: 1rem;
-  }
-  #why-us{
-    margin:0;
-    flex-direction: column;
-  }
-  .why-us-content h2{
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  .why-us-img{
-    align-self: center;
-    max-width: 95%;
-  }
-  .why-us-details{
-    margin-top: 20px;
-    gap: 50px;
-  }
-  .why-us-icon p{
-    text-align: center;
-  }
-  #yoga-style h2{
-    font-size: 1.7rem;
-    padding-top: 50px;
-    margin-bottom: 20px;
-  }
-  #yoga-style p{
-    margin: 0 20px ;
-  }
-  #yoga-style p br{
-    display: none;
-  }
-  .style-duo{
-    flex-direction: column;
-    margin-bottom: 50px;
-  }
-  .card-1 img{
-    width:95%;
-  }
-  .card-2{
-    background: none;
-    margin: 0;
-  }
-  .card-2 img{
-   max-width: 95%;
-   left: 0;
-   top:0;
-  }
-  .levels li{
-    margin: 5px 5px;
-    font-size: 12px;
-  }
-  #testimonials{
-    margin-top: 100px;
-  }
-  #testimonials h2{
-    font-size: 2rem;
-    margin-top:30px;
-  }
-  .testimonial-intro {
-    margin: 0;
-    font-size: 14px;
-    padding: 10px;
-  }
-  .testimonial-intro br{
-    display:none;
-  }
-  .testimonial-cards{
-    flex-direction: column;
-    margin:0;
-    gap: 30px;
+  .testimonial-card{
+    gap: 10px;
+    margin: 20px;
   }
   .testimonial-card img{
-    display: none;
+    width: 5rem;
+    height: 5rem;
+    align-self: center;
+    position: relative;
+    top: -5px;
   }
-  .testimonial-card-2 img{
-    display: none;
-  }
-  .testimonial-card-2{
-    top:0;
-  }
-  .review{
-    max-width: 300px;
-  }
-   #signup-section{
-    padding: 0;
-    justify-content: center;
-    align-content: center;
-
-   }
-  #signup-section h2{
-    font-size: 1.2rem;
-    padding: 50px 0 0 0;
-
-  }
-  #signup-section a{
-    font-size: 1rem;
-    margin-top: 20px;
-    
-  }
-  footer{
-    font-size: 12px;
-    padding: 20px;
-  }
-  .footer-top{
-    flex-direction: column;
-    margin-bottom: 80px;
-    font-size: 10px;
-  }
-  .column{
-    display: none;
-  }
-  .footer-bottom{
-    flex-direction: column;
-    gap: 20px;
-  }
-
-
 }
